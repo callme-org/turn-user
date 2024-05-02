@@ -22,7 +22,7 @@ class CreateUserUseCaseImpl(
         login: String,
         password: String,
     ) {
-        turnUsersRepository.create(
+        turnUsersRepository.createOrUpdate(
             CreateUserDto(
                 realm = DatabaseConstants.defaultRealm,
                 name = login,

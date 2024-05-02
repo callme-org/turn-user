@@ -21,7 +21,7 @@ class DatabaseRepositoryImpl : DatabaseRepository {
         )
             .let { database ->
                 transaction(database) {
-                    SchemaUtils.create(TurnUsers)
+                    SchemaUtils.createMissingTablesAndColumns(TurnUsers)
                 }
             }
     }
